@@ -9,25 +9,49 @@
         <title> Guestbook </title>
     </head>
     <body>
-        <h3> Libro de visitas </h3>
-        <h4> Comentarios pasados </h4>
-        <p> Me gusta front end developer </p>
-        <hr />
-        <p> Gracias por el contenido, es súper útil </p>
-        <hr />
-        <h5> Agregar nuevo comentario </h5>
-        <a class="waves-effect waves-light btn"> Large </a>
-        <a class="waves-effect waves-light btn"> Medium </a>
-        <a class="waves-effect waves-light btn"> Small </a>
-        <a class="waves-effect waves-light btn"> Color de texto </a>
-        <a class="waves-effect waves-light btn"> Color de fondo </a>
-        <a class="waves-effect waves-light btn"> Izquierda </a>
-        <a class="waves-effect waves-light btn"> Centrar </a>
-        <a class="waves-effect waves-light btn"> Derecha </a>
-        <textarea name="type" id="text" cols="30" rows="10"></textarea>
-        <h5> Así se vería tu comentario: </h5>
-        <p> Hola, amigos </p>
-        <a class="waves-effect waves-light btn"> Enviar comentario </a>
+
+        <header>
+            <h3> Libro de visitas </h3>
+        </header>
+
+        <div>
+            <h4> Comentarios pasados </h4>
+        </div>
+
+        <div>
+            <p> Me gusta front end developer </p>
+            <hr />
+            <p> Gracias por el contenido, es súper útil </p>
+            <hr />
+        </div>
+        
+        <form>
+            <div>
+                <h5> Agregar nuevo comentario </h5>
+                <a class="waves-effect waves-light btn" id="large-button"> Large </a>
+                <a class="waves-effect waves-light btn" id="medium-button"> Medium </a>
+                <a class="waves-effect waves-light btn" id="small-button"> Small </a>
+                <a class="waves-effect waves-light btn" id="color-text-button"> Color de texto </a>
+                <a class="waves-effect waves-light btn" id="back-color-button"> Color de fondo </a>
+                <a class="waves-effect waves-light btn" id="left-button"> Izquierda </a>
+                <a class="waves-effect waves-light btn" id="center-button"> Centrar </a>
+                <a class="waves-effect waves-light btn" id="right-button"> Derecha </a>
+            </div>
+                    
+            <div>
+                <textarea name="type" id="type-commit" cols="30" rows="10"></textarea>
+            </div>
+            
+            <div>
+                <h5> Así se vería tu comentario: </h5>
+            </div>
+            
+            <div>
+                <!--<p id="commit"> Hola, amigos </p>-->
+                <a class="waves-effect waves-light btn"> Enviar comentario </a>
+            </div>
+        </form>
+
         <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="js/materialize.min.js"></script>
         <script src="js/app.js"></script>
