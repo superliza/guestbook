@@ -98,14 +98,20 @@ function paintDataCommits() {
         // var theCommits = dataCommits[i];
         // console.log(hola);
         var $commits = $("<p />").text(dataCommits[i]);
+        $commits.addClass("new-commits");
         $('#dynamic-commits').append($commits);
     }    
 }
 
 function newCommit() {
     var $publishCommit = $("<p />");
-    $publishCommit.text($typeCommit.val())
+    $publishCommit.text($typeCommit.val());
+    $publishCommit.addClass("new-commits");
+    // dataCommits.push($publishCommit);
+    // console.log(dataCommits);
     $('#dynamic-commits').prepend($publishCommit);
+    dataCommits.push($typeCommit.val());
+    console.log(dataCommits);
     $typeCommit.val("");
 }
 
