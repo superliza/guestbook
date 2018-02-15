@@ -31,6 +31,8 @@ function loadPage() {
     $rightButton.click(rightText);
     $colorTextButton.click(textColor);
     $backColorButton.click(backColor);
+    $sendCommit.click(newCommit);
+    paintDataCommits();
 }
 
 function typeRealTime() {
@@ -84,6 +86,27 @@ function backColor() {
         var typeBackgroundColor = prompt("Escribe tu color de fondo favorito para el texto");
         $showCommitRealTime.css("background-color", typeBackgroundColor);
     }   
+}
+
+var dataCommits = [
+    "Me gusta front-end developer.",
+    "Gracias por el contenido, es súper útil."
+];
+
+function paintDataCommits() {
+    for (var i = 0; i < dataCommits.length; i++) {
+        // var theCommits = dataCommits[i];
+        // console.log(hola);
+        var $commits = $("<p />").text(dataCommits[i]);
+        $('#dynamic-commits').append($commits);
+    }    
+}
+
+function newCommit() {
+    var $publishCommit = $("<p />");
+    $publishCommit.text($typeCommit.val())
+    $('#dynamic-commits').prepend($publishCommit);
+    $typeCommit.val("");
 }
 
 $(document).ready(loadPage);
